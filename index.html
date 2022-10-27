@@ -25,9 +25,9 @@
       <main id="app">
             <div class="container d-flex justify-content-center align-items-center">
                   <div class="slides">
-                        <img :src="slides[1].image" alt="">
-                        <button class="btn btn-primary next"><i class="fa-solid fa-chevron-up fa-xl"></i></button>
-                        <button class="btn btn-primary prev"><i class="fa-solid fa-chevron-down fa-xl"></i></button>
+                        <img :src="slides[activeImage].image" alt="">
+                        <button class="btn btn-primary next" @click="nextImage"><i class="fa-solid fa-chevron-up fa-xl"></i></button>
+                        <button class="btn btn-primary prev" @click="prevImage"><i class="fa-solid fa-chevron-down fa-xl"></i></button>
                   </div>
                   <div class="thumbnails">
                         <img src="./img/01.webp" alt="">
