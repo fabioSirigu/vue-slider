@@ -39,14 +39,14 @@ createApp ({
     },
     methods: {
         prevImage() {
-            console.log('prev');
+            //console.log('prev');
             this.activeImage--
             if (this.activeImage < 0) {
                 this.activeImage = this.slides.length - 1
             }
         },
         nextImage() {
-            console.log('next');
+            //console.log('next');
             this.activeImage++
             if (this.activeImage === this.slides.length) {
                 this.activeImage = 0

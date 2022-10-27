@@ -19,32 +19,31 @@
 </head>
 
 <body>
-      <header>
-            <h1 class="text-center text-uppercase my-5">My carousel</h1>
-      </header>
+      
       <main id="app">
-            <div class="container d-flex justify-content-center align-items-center" @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay">
-                  <div class="slides">
-                        <img :src="slides[activeImage].image" alt="">
-                        <button class="btn btn-primary prev" @click="prevImage"><i class="fa-solid fa-chevron-up fa-xl"></i></button>
-                        <button class="btn btn-primary next" @click="nextImage"><i class="fa-solid fa-chevron-down fa-xl"></i></button>
+            <section class="carousel">
+                  <h1 class="text-center text-uppercase my-3">My carousel with VUE JS</h1>
+                  <div class="container d-flex justify-content-center align-items-center" @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay">
+                        <div class="slides">
+                              <img :src="slides[activeImage].image" alt="">
+                              <button class="btn btn-primary prev" @click="prevImage"><i class="fa-solid fa-chevron-up fa-xl"></i></button>
+                              <button class="btn btn-primary next" @click="nextImage"><i class="fa-solid fa-chevron-down fa-xl"></i></button>
+                        </div>
+                        <div class="thumbnails">
+                              <img  :class=" activeImage === i ? 'active_thumb' : '' " :src="slides[i].image" alt="" v-for="(slide, i) in slides" @click="changeImage(i)">
+                        </div>
+                        <!-- /.slides -->
+                  </div>     
+                  <div class="title text-center">
+                        <h1 class="fw-bold text-uppercase">title</h1>
+                        <h2 :class=" i === activeImage ? 'active_text' : '' " v-for="(title, i) in slides">{{slides[i].title}}</h2>
                   </div>
-                  <div class="thumbnails">
-                        <img  :class=" activeImage === i ? 'active_thumb' : '' " :src="slides[i].image" alt="" v-for="(slide, i) in slides" @click="changeImage(i)">
+                  <div class="text text-center">
+                        <h3 class="fw-bold text-uppercase">description</h3>
+                        <h5 :class=" i === activeImage ? 'active_text' : '' " v-for="(text, i) in slides">{{slides[i].text}}</h5>
                   </div>
-                  <!-- /.slides -->
-            </div>     
-            <div class="title text-center">
-                  <h2 :class=" i === activeImage ? 'active_text' : '' " v-for="(title, i) in slides">{{slides[i].title}}</h2>
-            </div>
-            <div class="text text-center">
-                  <h5 :class=" i === activeImage ? 'active_text' : '' " v-for="(text, i) in slides">{{slides[i].text}}</h5>
-            </div>
-            <!-- /.container -->
+            </section>
       </main>
-      <footer>
-            <!-- place footer here -->
-      </footer>
       <!-- Bootstrap JavaScript Libraries -->
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
