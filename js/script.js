@@ -48,6 +48,10 @@ createApp ({
             if (this.activeImage === this.slides.length) {
                 this.activeImage = 0
             }
-        }
+        },
+        changeImage(index) {
+            //console.log(index);
+            this.activeImage = index
+        },
     }
 }).mount("#app")
