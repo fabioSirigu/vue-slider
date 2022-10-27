@@ -23,7 +23,7 @@
             <h1 class="text-center text-uppercase my-5">My carousel</h1>
       </header>
       <main id="app">
-            <div class="container d-flex justify-content-center align-items-center"@mouseenter="stopAutoPlay" @mouseleave="startAutoPlay">
+            <div class="container d-flex justify-content-center align-items-center" @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay">
                   <div class="slides">
                         <img :src="slides[activeImage].image" alt="">
                         <button class="btn btn-primary prev" @click="prevImage"><i class="fa-solid fa-chevron-up fa-xl"></i></button>
