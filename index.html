@@ -26,8 +26,8 @@
             <div class="container d-flex justify-content-center align-items-center">
                   <div class="slides">
                         <img :src="slides[activeImage].image" alt="">
-                        <button class="btn btn-primary next" @click="nextImage"><i class="fa-solid fa-chevron-up fa-xl"></i></button>
-                        <button class="btn btn-primary prev" @click="prevImage"><i class="fa-solid fa-chevron-down fa-xl"></i></button>
+                        <button class="btn btn-primary prev" @click="prevImage"><i class="fa-solid fa-chevron-up fa-xl"></i></button>
+                        <button class="btn btn-primary next" @click="nextImage"><i class="fa-solid fa-chevron-down fa-xl"></i></button>
                   </div>
                   <div class="thumbnails">
                         <img  :class=" activeImage === i ? 'active_thumb' : '' " :src="slides[i].image" alt="" v-for="(slide, i) in slides" @click="changeImage(i)">
