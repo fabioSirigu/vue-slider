@@ -1,6 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-color: palevioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
 .carousel {
     max-width: 1200px;
     margin: 2rem auto;
@@ -47,10 +57,9 @@ img {
 
 }
 
-h2, 
+h1, 
 h5{
     display: none;
-    font-style: italic;
 }
 .active_text {
     display: block;
@@ -58,8 +67,9 @@ h5{
 
 .title,
 .text {
-    margin: 1rem auto;
+    margin: 1rem;
     max-width: 800px;
+    font-weight: bold;
 }
 
 .thumbnails {
