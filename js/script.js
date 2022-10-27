@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp ({
     data(){
         return {
+            i: 0,
             activeImage: 0,
             intervalId: null,
             play: null,

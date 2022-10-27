@@ -34,8 +34,12 @@
                   </div>
                   <!-- /.slides -->
             </div>     
-            <div class="title text-center"></div>
-            <div class="text text-center"></div>
+            <div class="title text-center">
+                  <h2 :class=" i === activeImage ? 'active_text' : '' " v-for="(title, i) in slides">{{slides[i].title}}</h2>
+            </div>
+            <div class="text text-center">
+                  <h5 :class=" i === activeImage ? 'active_text' : '' " v-for="(text, i) in slides">{{slides[i].text}}</h5>
+            </div>
             <!-- /.container -->
       </main>
       <footer>
