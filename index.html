@@ -23,7 +23,7 @@
       
             <section class="carousel" id="app">
                   <div class="title text-center text-uppercase">
-                        <h1 :class=" i === activeImage ? 'active_text' : '' " v-for="(title, i) in slides">{{slides[activeImage].title}}</h2>
+                        <h1>{{slides[activeImage].title}}</h1>
                   </div>
                   <div class="container d-flex justify-content-center align-items-center" @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay">
                         <div class="slides">
@@ -38,8 +38,7 @@
                   </div>     
                   
                   <div class="text text-center">
-                        
-                        <h5 :class=" i === activeImage ? 'active_text' : '' " v-for="(text, i) in slides">{{slides[activeImage].text}}</h5>
+                        <h5>{{slides[activeImage].text}}</h5>
                   </div>
             </section>
       
